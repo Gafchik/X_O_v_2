@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:local="clr-namespace:X_O_v_2">
+    <Style x:Key="stl">
+        <Setter Property="ItemsControl.FontFamily" Value="Verdana" />
+        <Setter Property="ItemsControl.Background" Value="DarkSlateGray" />
+        <Setter Property="ItemsControl.Foreground" Value="White" />
+        <Setter Property="ItemsControl.FontSize" Value="20" />
+        <Setter Property="ItemsControl.Margin" Value="30 15 30 15" />
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="ItemsControl.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Storyboard.TargetProperty="Background.Color" 
+                                        Duration="0:0:1" 
+                                        From="DarkSlateGray" To="Yellow"
+                                        AutoReverse="True">
+                        </ColorAnimation>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
